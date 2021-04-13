@@ -30,7 +30,7 @@ class CustomMainActivity : AppCompatActivity() {
         builder = NotificationCompat.Builder(applicationContext, "ChannelId-111")
         notificationManager!!.cancel(NotificationID)
         remoteView = RemoteViews(packageName, R.layout.notification_layout)
-        val switchIntent = Intent(this, MainActivity::class.java)
+        val switchIntent = Intent(this, TestActivity::class.java)
         val pendingSwitchIntent = PendingIntent.getBroadcast(this, 1212, switchIntent, 0)
         builder!!.setSmallIcon(R.drawable.ic_launcher_background)
         builder!!.setFullScreenIntent(pendingSwitchIntent, true)
